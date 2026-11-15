@@ -39,12 +39,8 @@
             </div>
 
             <div class="hero-visual">
-                <!-- PREENCHER ALT E CRÉDITOS DA IMAGEM PRINCIPAL ABAIXO -->
                 <figure class="photo-frame">
                     <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Estudantes universitários comemorando a formatura">
-                    <!-- <figcaption class="photo-credit photo-credit-hero">
-                        Foto: Divulgação / <a href="URL_DA_FONTE_AQUI" target="_blank" rel="noopener noreferrer">[Nome da Faculdade ou Fonte]</a>
-                    </figcaption> -->
                 </figure>
 
                 <!-- Selos Flutuantes -->
@@ -89,16 +85,21 @@
         <section class="grid" id="grid" aria-label="Instituições de ensino"></section>
     </main>
 
-    <!-- SEÇÃO EAD COM RECORTE DIAGONAL SUPERIOR -->
+    <!-- SEÇÃO EAD COM RECORTE DIAGONAL SUPERIOR E SELETOR DE POLOS -->
     <section id="ead" class="ead-section">
         <div class="ead-diagonal-top" aria-hidden="true"></div>
         <div class="wrap">
             <div class="ead-header">
-                <span class="sticker sticker-gold">Modalidade Flexível</span>
-                <h2 class="sec-title">Top 5 EaD em Análise e Desenvolvimento de Sistemas</h2>
-                <p class="sec-lead">Ranking ordenado pelo Conceito Institucional (CI-EaD), Conceito do Curso (CC) e menor mensalidade promocional com polos em Piracicaba.</p>
+                <div class="ead-title-block">
+                    <span class="sticker sticker-gold">Modalidade Flexível</span>
+                    <h2 class="sec-title">Top 5 EaD em Análise e Desenvolvimento de Sistemas</h2>
+                    <p class="sec-lead">Ranking ordenado pelo Conceito Institucional (CI-EaD), Conceito do Curso (CC) e mensalidade promocional. Selecione a cidade para ver os polos locais:</p>
+                </div>
+
+                <nav class="ead-tabs" id="ead-tabs" aria-label="Selecionar cidade dos polos EaD"></nav>
             </div>
-            <div class="rail" id="rail"></div>
+
+            <div class="rail" id="rail" aria-live="polite"></div>
         </div>
     </section>
 

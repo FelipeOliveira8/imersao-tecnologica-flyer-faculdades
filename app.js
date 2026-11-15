@@ -344,13 +344,94 @@ const D = {
             "obs": "Oferta presencial da Estácio mais próxima fica em Campinas (Av. Francisco Glicério, 1522 - Centro); em Piracicaba a operação é de polos EaD/semipresencial."
         }
     ],
-    "ead_top5_piracicaba_ads": {
+    "ead_top5_ads": {
+        "criterio_ordem": "CI-EaD, Conceito do Curso (CC) de ADS e menor mensalidade promocional",
         "instituicoes": [
-            { "ordem": 1, "id": "ead-unicesumar", "nome": "UniCesumar", "modalidade": "EaD", "ci_ead": 5, "conceito_curso_ads": { "CC": 5, "CPC": 4 }, "mensalidade_faixa": "R$ 149,00 a R$ 219,00", "polos_piracicaba": ["Centro"], "prouni": "Sim (50% e 100%)", "site": "https://www.unicesumar.edu.br" },
-            { "ordem": 2, "id": "ead-anhanguera", "nome": "Anhanguera (EaD)", "modalidade": "EaD 100% online", "ci_ead": 5, "conceito_curso_ads": { "CC": 4 }, "mensalidade_faixa": "R$ 107,20 a R$ 149,00", "polos_piracicaba": ["Centro", "Vila Rezende"], "prouni": "Sim (50% e 100%)", "site": "https://www.anhanguera.com" },
-            { "ordem": 3, "id": "ead-estacio", "nome": "Estácio (Digital)", "modalidade": "EaD (Digital)", "ci_ead": 5, "conceito_curso_ads": { "CC": 4 }, "mensalidade_faixa": "R$ 129,00 a R$ 133,00", "polos_piracicaba": ["Centro"], "prouni": "Sim (50% e 100%)", "site": "https://estacio.br" },
-            { "ordem": 4, "id": "ead-cruzeiro-do-sul-virtual", "nome": "Cruzeiro do Sul Virtual", "modalidade": "EaD", "ci_ead": 5, "conceito_curso_ads": { "CC": 4, "Enade": 3 }, "mensalidade_faixa": "a partir de R$ 154,96", "polos_piracicaba": ["Alto", "Vila Monteiro", "Santa Terezinha"], "prouni": "Sim (somente 100%)", "site": "https://www.cruzeirodosulvirtual.com.br/" },
-            { "ordem": 5, "id": "ead-unip", "nome": "UNIP (EaD)", "modalidade": "EaD", "ci_ead": 4, "conceito_curso_ads": { "CC": 4 }, "mensalidade_faixa": "R$ 149,00 a R$ 189,00", "polos_piracicaba": ["Centro (R. Alferes José Caetano)"], "prouni": "Sim (50% e 100%)", "site": "https://www.unip.br" }
+            {
+                "ordem": 1,
+                "id": "ead-unicesumar",
+                "nome": "UniCesumar",
+                "modalidade": "EaD",
+                "ci_ead": 5,
+                "conceito_curso_ads": { "CC": 5, "CPC": 4 },
+                "mensalidade_faixa": "R$ 149,00 a R$ 219,00",
+                "polos_por_cidade": {
+                    "Piracicaba": ["Centro"],
+                    "Americana": ["Centro", "Vila Rehder"],
+                    "Santa Bárbara d’Oeste": ["Centro"],
+                    "Capivari": ["Centro"]
+                },
+                "prouni": "Sim (50% e 100%)",
+                "site": "https://www.unicesumar.edu.br"
+            },
+            {
+                "ordem": 2,
+                "id": "ead-anhanguera",
+                "nome": "Anhanguera (EaD)",
+                "modalidade": "EaD 100% online",
+                "ci_ead": 5,
+                "conceito_curso_ads": { "CC": 4 },
+                "mensalidade_faixa": "R$ 107,20 a R$ 149,00",
+                "polos_por_cidade": {
+                    "Piracicaba": ["Centro", "Vila Rezende"],
+                    "Americana": ["Centro", "Jardim Girassol"],
+                    "Santa Bárbara d’Oeste": ["Distrito Industrial", "Centro"],
+                    "Capivari": ["Centro"]
+                },
+                "prouni": "Sim (50% e 100%)",
+                "site": "https://www.anhanguera.com"
+            },
+            {
+                "ordem": 3,
+                "id": "ead-estacio",
+                "nome": "Estácio (Digital)",
+                "modalidade": "EaD (Digital)",
+                "ci_ead": 5,
+                "conceito_curso_ads": { "CC": 4 },
+                "mensalidade_faixa": "R$ 129,00 a R$ 133,00",
+                "polos_por_cidade": {
+                    "Piracicaba": ["Centro"],
+                    "Americana": ["Centro"],
+                    "Santa Bárbara d’Oeste": ["Parque Olaria (R. Dom Pedro II)"],
+                    "Capivari": ["Centro (confirmar disponibilidade)"]
+                },
+                "prouni": "Sim (50% e 100%)",
+                "site": "https://estacio.br"
+            },
+            {
+                "ordem": 4,
+                "id": "ead-cruzeiro-do-sul-virtual",
+                "nome": "Cruzeiro do Sul Virtual",
+                "modalidade": "EaD",
+                "ci_ead": 5,
+                "conceito_curso_ads": { "CC": 4, "Enade": 3 },
+                "mensalidade_faixa": "a partir de R$ 154,96",
+                "polos_por_cidade": {
+                    "Piracicaba": ["Alto", "Vila Monteiro", "Santa Terezinha"],
+                    "Americana": ["Centro", "São Vito"],
+                    "Santa Bárbara d’Oeste": ["Vila Grego"],
+                    "Capivari": ["Centro"]
+                },
+                "prouni": "Sim (somente 100%)",
+                "site": "https://www.cruzeirodosulvirtual.com.br/"
+            },
+            {
+                "ordem": 5,
+                "id": "ead-unip",
+                "nome": "UNIP (EaD)",
+                "modalidade": "EaD",
+                "ci_ead": 4,
+                "conceito_curso_ads": { "CC": 4 },
+                "mensalidade_faixa": "R$ 149,00 a R$ 189,00",
+                "polos_por_cidade": {
+                    "Piracicaba": ["Centro (R. Alferes José Caetano)"],
+                    "Americana": ["Centro"],
+                    "Santa Bárbara d’Oeste": ["Jardim Pérola / Centro"],
+                    "Capivari": ["Centro"]
+                },
+                "prouni": "Sim (50% e 100%)",
+                "site": "https://www.unip.br"
+            }
         ]
     }
 };
@@ -359,7 +440,64 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 const P = D.presenciais_e_hibridas;
-const E = D.ead_top5_piracicaba_ads.instituicoes;
+const E = D.ead_top5_ads.instituicoes;
+const EAD_CITIES = [
+    "Piracicaba",
+    "Americana",
+    "Santa Bárbara d’Oeste",
+    "Capivari"
+];
+let selectedEadCity = "Piracicaba";
+
+function renderEad() {
+    $("#ead-tabs").innerHTML = EAD_CITIES.map(cityName => `
+        <button class="ead-tab" data-ead-city="${esc(cityName)}" aria-pressed="${selectedEadCity === cityName}">
+            <span class="pin-dot" aria-hidden="true"></span>
+            ${esc(cityName)}
+        </button>
+    `).join("");
+
+    $("#rail").innerHTML = E.map(e => {
+        const c = e.conceito_curso_ads || {};
+        const polos = (e.polos_por_cidade && e.polos_por_cidade[selectedEadCity]) || [];
+        const hasPolo = polos.length > 0;
+
+        return `
+        <article class="ecard">
+            <div class="ecard-top">
+                <span class="ord">#${e.ordem}</span>
+                <span class="b out">${esc(e.modalidade)}</span>
+            </div>
+            <h3>${esc(e.nome)}</h3>
+            <div class="polo-badge ${hasPolo ? "" : "no-polo"}">
+                📍 ${esc(selectedEadCity)}
+            </div>
+            <dl>
+                <div class="kv">
+                    <dt>Polos locais</dt>
+                    <dd>${hasPolo ? esc(polos.join(", ")) : '<span class="unk">Consulte polo mais próximo</span>'}</dd>
+                </div>
+                <div class="kv">
+                    <dt>Nota CI-EaD</dt>
+                    <dd>${e.ci_ead} de 5</dd>
+                </div>
+                <div class="kv">
+                    <dt>Nota ADS</dt>
+                    <dd>${esc(Object.entries(c).map(([k, v]) => k + " " + v).join(" · "))}</dd>
+                </div>
+                <div class="kv">
+                    <dt>Mensalidade</dt>
+                    <dd>${esc(e.mensalidade_faixa)}</dd>
+                </div>
+                <div class="kv">
+                    <dt>Prouni</dt>
+                    <dd>${esc(e.prouni)}</dd>
+                </div>
+            </dl>
+            ${e.site ? `<a class="btn cta" href="${esc(e.site)}" target="_blank" rel="noopener">Conhecer curso ↗</a>` : ""}
+        </article>`;
+    }).join("");
+}
 
 const UNK = x => x == null || x === "" || /^a_(confirmar|coletar)/.test(String(x));
 const clean = s => s.replace(/a_confirmar/g, "a confirmar").replace(/a_coletar/g, "em levantamento");
@@ -665,6 +803,11 @@ document.addEventListener("click", e => {
     if (!b && t.id !== "dlg") return;
     if (t.id === "dlg" || (b && b.hasAttribute("data-x"))) return $("#dlg").close();
     if (b.classList.contains("tab")) return setCity(b.dataset.k);
+    if (b.hasAttribute("data-ead-city")) {
+        selectedEadCity = b.dataset.eadCity;
+        renderEad();
+        return;
+    }
     if (b.hasAttribute("data-clr")) return clear();
     if (b.classList.contains("det")) return modal(P.find(i => i.id === b.dataset.id));
     if (b.hasAttribute("data-cp")) {
@@ -680,29 +823,10 @@ $("#stats").innerHTML = [
     [P.filter(i => i.mensalidade === "Gratuita").length, "Gratuitas"]
 ].map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");
 
-$("#rail").innerHTML = E.map(e => {
-    const c = e.conceito_curso_ads || {};
-    return `
-    <article class="ecard">
-        <div class="ecard-top">
-            <span class="ord">#${e.ordem}</span>
-            <span class="b out">${esc(e.modalidade)}</span>
-        </div>
-        <h3>${esc(e.nome)}</h3>
-        <dl>
-            <div class="kv"><dt>Nota CI-EaD</dt><dd>${e.ci_ead} de 5</dd></div>
-            <div class="kv"><dt>Nota ADS</dt><dd>${esc(Object.entries(c).map(([k, v]) => k + " " + v).join(" · "))}</dd></div>
-            <div class="kv"><dt>Mensalidade</dt><dd>${esc(e.mensalidade_faixa)}</dd></div>
-            <div class="kv"><dt>Polos</dt><dd>${esc(e.polos_piracicaba.join(", "))}</dd></div>
-            <div class="kv"><dt>Prouni</dt><dd>${esc(e.prouni)}</dd></div>
-        </dl>
-        ${e.site ? `<a class="btn cta" href="${esc(e.site)}" target="_blank" rel="noopener">Conhecer curso ↗</a>` : ""}
-    </article>`;
-}).join("");
-
 const dt = D.meta.atualizado_em.split("-").reverse().join("/");
 $("#upd").textContent = "Dados atualizados em " + dt + ". Reunidos de fontes oficiais e portais de vestibular; confirme sempre no edital da instituição.";
 $("#avisos").innerHTML = D.meta.avisos.map(a => `<li>${esc(a)}</li>`).join("");
 
 fromHash();
 render();
+renderEad();
