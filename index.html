@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Guia de Faculdades de TI 2027 · Piracicaba e Região</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HERO ESTILO FLYER UNIVERSITÁRIO -->
+    <header class="hero">
+        <div class="hero-geo-circle" aria-hidden="true"></div>
+        <div class="hero-geo-dots" aria-hidden="true"></div>
+
+        <div class="wrap hero-grid">
+            <div class="hero-content">
+                <div class="sticker-row">
+                    <span class="sticker sticker-gold">Guia Oficial 2027</span>
+                    <span class="sticker sticker-orange">Vestibulares &amp; Bolsas</span>
+                </div>
+
+                <h1>Sua graduação em <span class="highlight-underline">Tecnologia</span> perto de casa.</h1>
+
+                <p class="hero-lead">
+                    Compare faculdades públicas e privadas de TI em Piracicaba, Capivari, Santa Bárbara d’Oeste, Americana e região. Cursos, turnos, notas do MEC e prazos de inscrição reunidos em um só lugar.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#catalogo" class="btn-cta">Explorar Faculdades ↓</a>
+                    <a href="#ead" class="btn-ghost-light">Ver Top 5 EaD</a>
+                </div>
+
+                <div class="stats" id="stats"></div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- PREENCHER ALT E CRÉDITOS DA IMAGEM PRINCIPAL ABAIXO -->
+                <figure class="photo-frame">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Estudantes universitários comemorando a formatura">
+                    <!-- <figcaption class="photo-credit photo-credit-hero">
+                        Foto: Divulgação / <a href="URL_DA_FONTE_AQUI" target="_blank" rel="noopener noreferrer">[Nome da Faculdade ou Fonte]</a>
+                    </figcaption> -->
+                </figure>
+
+                <!-- Selos Flutuantes -->
+                <div class="float-badge float-top">
+                    <span class="float-icon">★</span>
+                    <div>
+                        <strong>100% Atualizado</strong>
+                        <small>Prazos Vestibular 2027</small>
+                    </div>
+                </div>
+
+                <div class="float-badge float-bottom">
+                    <span class="float-tag">Públicas &amp; Privadas</span>
+                    <strong>ADS · Computação · IA · Eng.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recorte Diagonal Inferior -->
+        <div class="hero-diagonal" aria-hidden="true"></div>
+    </header>
+
+    <!-- BARRA DE CIDADES FIXA -->
+    <div class="city-bar" id="catalogo">
+        <nav class="tabs" id="tabs" aria-label="Filtrar por cidade"></nav>
+    </div>
+
+    <main class="wrap">
+        <!-- FILTROS -->
+        <section class="tools" aria-label="Filtros de pesquisa">
+            <div class="fhead">
+                <div class="count-wrap">
+                    <span class="pill-indicator"></span>
+                    <p id="count" aria-live="polite"></p>
+                </div>
+                <button class="btn-filter-toggle" id="ft" aria-expanded="false">Filtrar opções <span></span></button>
+            </div>
+            <div class="filters-box" id="filters"></div>
+        </section>
+
+        <!-- GRADE DE INSTITUIÇÕES -->
+        <section class="grid" id="grid" aria-label="Instituições de ensino"></section>
+    </main>
+
+    <!-- SEÇÃO EAD COM RECORTE DIAGONAL SUPERIOR -->
+    <section id="ead" class="ead-section">
+        <div class="ead-diagonal-top" aria-hidden="true"></div>
+        <div class="wrap">
+            <div class="ead-header">
+                <span class="sticker sticker-gold">Modalidade Flexível</span>
+                <h2 class="sec-title">Top 5 EaD em Análise e Desenvolvimento de Sistemas</h2>
+                <p class="sec-lead">Ranking ordenado pelo Conceito Institucional (CI-EaD), Conceito do Curso (CC) e menor mensalidade promocional com polos em Piracicaba.</p>
+            </div>
+            <div class="rail" id="rail"></div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ COM AVISO LEGAL -->
+    <footer class="footer">
+        <div class="wrap footer-grid">
+            <div>
+                <strong class="footer-brand">Guia TI · Região de Piracicaba</strong>
+                <p id="upd"></p>
+                <p class="footer-disclaimer">
+                    Projeto acadêmico sem fins lucrativos. As imagens e marcas exibidas pertencem às suas respectivas instituições de ensino.
+                </p>
+            </div>
+            <ul id="avisos"></ul>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALHES -->
+    <dialog id="dlg" aria-labelledby="mt"></dialog>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
