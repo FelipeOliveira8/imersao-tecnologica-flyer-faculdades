@@ -825,7 +825,7 @@ $("#stats").innerHTML = [
 
 const dt = D.meta.atualizado_em.split("-").reverse().join("/");
 $("#upd").textContent = "Dados atualizados em " + dt + ". Reunidos de fontes oficiais e portais de vestibular; confirme sempre no edital da instituição.";
-$("#avisos").innerHTML = D.meta.avisos.map(a => `<li>${esc(a)}</li>`).join("");
+// $("#avisos").innerHTML = D.meta.avisos.map(a => `<li>${esc(a)}</li>`).join("");
 
 fromHash();
 render();
