@@ -52,9 +52,9 @@ const D = {
             "cidade": "Americana",
             "bairro_endereco": "a_confirmar",
             /* PREENCHER DADOS DA IMAGEM ABAIXO */
-            "imagem_url": null,
+            "imagem_url": "https://cdn.liberal.com.br/media/de/10/a9/23694/fam-abre-processo-seletivo-para-a-contratacao-de-docentes-20250915181914000.jpg",
             "imagem_alt": "Fachada do campus da FAM - Faculdade de Americana",
-            "imagem_fonte": "URL_DA_FONTE_AQUI",
+            "imagem_fonte": "https://cdn.liberal.com.br/media/de/10/a9/23694/fam-abre-processo-seletivo-para-a-contratacao-de-docentes-20250915181914000.jpg",
             "cursos": [
                 { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "duracao": "4 anos (típico)" },
                 { "nome": "Análise e Desenvolvimento de Sistemas / Sistemas de Informação", "grau": "a_confirmar", "turnos": ["a_confirmar"], "duracao": "a_confirmar" }
@@ -76,9 +76,9 @@ const D = {
             "cidade": "Americana",
             "bairro_endereco": "Centro (polo)",
             /* PREENCHER DADOS DA IMAGEM ABAIXO */
-            "imagem_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
+            "imagem_url": "https://cdn.portal.estacio.br/Unimetrocamp_ce5be96f69.png",
             "imagem_alt": "Fachada da unidade UniMetrocamp Wyden",
-            "imagem_fonte": "URL_DA_FONTE_AQUI",
+            "imagem_fonte": "https://cdn.portal.estacio.br/Unimetrocamp_ce5be96f69.png",
             "cursos": [
                 { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Noturno (ao vivo)"], "duracao": "4 anos (típico)" },
                 { "nome": "Redes de Computadores", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)"], "duracao": "~2 a 2,5 anos (típico)" },
@@ -256,9 +256,9 @@ const D = {
             "cidade": "Piracicaba",
             "bairro_endereco": "Av. Monsenhor Martinho Salgot, 560 - Areão, CEP 13414-040",
             /* PREENCHER DADOS DA IMAGEM ABAIXO */
-            "imagem_url": null,
+           "imagem_url": "https://static.wixstatic.com/media/0b95ba_e47757dfa5e0484db509cbfbf5305bba~mv2.jpeg/v1/fill/w_925,h_694,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0b95ba_e47757dfa5e0484db509cbfbf5305bba~mv2.jpeg",
             "imagem_alt": "Fachada da Escola de Engenharia de Piracicaba (FUMEP)",
-            "imagem_fonte": "URL_DA_FONTE_AQUI",
+            "imagem_fonte": "https://static.wixstatic.com/media/0b95ba_e47757dfa5e0484db509cbfbf5305bba~mv2.jpeg/v1/fill/w_925,h_694,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0b95ba_e47757dfa5e0484db509cbfbf5305bba~mv2.jpeg",
             "cursos": [
                 { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Noturno"], "duracao": "4 anos" },
                 { "nome": "Engenharia de Computação", "grau": "Bacharelado", "turnos": ["Noturno"], "duracao": "5 anos" }
@@ -280,9 +280,9 @@ const D = {
             "cidade": "Piracicaba",
             "bairro_endereco": "Av. Dr. João Conceição, 353 - Paulista",
             /* PREENCHER DADOS DA IMAGEM ABAIXO */
-            "imagem_url": null,
+           "imagem_url": "https://www.atribunapiracicabana.com.br/wp-content/uploads/2026/02/02-02-Faculdade-Anhaguera-1-768x509.jpg",
             "imagem_alt": "Fachada da Faculdade Anhanguera Piracicaba",
-            "imagem_fonte": "URL_DA_FONTE_AQUI",
+            "imagem_fonte":"https://www.atribunapiracicabana.com.br/wp-content/uploads/2026/02/02-02-Faculdade-Anhaguera-1-768x509.jpg",
             "cursos": [
                 { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Matutino", "Noturno (maioria dos cursos de TI)"], "duracao": "4 anos (típico)" }
             ],
@@ -304,9 +304,9 @@ const D = {
             "cidade": "Santa Bárbara d’Oeste",
             "bairro_endereco": "Distrito Industrial",
             /* PREENCHER DADOS DA IMAGEM ABAIXO */
-            "imagem_url": null,
+            "imagem_url":"https://portalatualidade.com.br/images/noticias/10252/21082020120638_Faculdade_.jpeg",
             "imagem_alt": "Fachada da unidade Anhanguera Santa Bárbara d’Oeste",
-            "imagem_fonte": "URL_DA_FONTE_AQUI",
+            "imagem_fonte":"https://portalatualidade.com.br/images/noticias/10252/21082020120638_Faculdade_.jpeg",
             "cursos": [
                 { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Semipresencial noturno"], "duracao": "~2,5 anos (típico)" },
                 { "nome": "Engenharia da Computação", "grau": "Bacharelado", "turnos": ["Semipresencial noturno"], "duracao": "5 anos (típico)" }
@@ -328,9 +328,9 @@ const D = {
             "cidade": "Santa Bárbara d’Oeste",
             "bairro_endereco": "Parque Olaria (R. Dom Pedro II)",
             /* PREENCHER DADOS DA IMAGEM ABAIXO */
-            "imagem_url": "",
+             "imagem_url": "null",
             "imagem_alt": "Fachada da Estácio Santa Bárbara d’Oeste",
-            "imagem_fonte": "URL_DA_FONTE_AQUI",
+            "imagem_fonte": "null",
             "cursos": [
                 { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)", "Semipresencial noturno"], "duracao": "~2,5 anos (típico)" },
                 { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "duracao": "4 anos (típico)" }
