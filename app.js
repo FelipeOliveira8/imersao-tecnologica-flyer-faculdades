@@ -6,7 +6,7 @@ const D = {
         "avisos": [
             "Mensalidades de instituições privadas são promocionais e variam por semestre e polo.",
             "Campos 'a_confirmar' e 'null' são exibidos como 'Consulte o site oficial'.",
-            "Imagens: placeholders temáticos do Unsplash até a inserção das fotos reais dos campi."
+            "Imagens: placeholders temáticos ou fallback institucional até a inserção das fotos reais."
         ]
     },
     "presenciais_e_hibridas": [
@@ -18,19 +18,19 @@ const D = {
             "mensalidade": "Gratuita",
             "modalidade": "Presencial",
             "cidade": "Americana",
-            "bairro_endereco": "a_confirmar",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
+            "bairro_endereco": "Rua Emílio de Menezes, s/n - Gleba B, Vila Amorim, Americana - SP, CEP 13469-111",
             "imagem_url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2020/10/Fatec-Unidade-Americana.jpg",
             "imagem_alt": "Fachada do campus da Fatec Americana",
             "imagem_fonte": "https://www.cps.sp.gov.br/fatecs/fatec-americana-ministro-ralph-biasi/",
             "cursos": [
-                { "nome": "Segurança da Informação", "grau": "Tecnólogo", "turnos": ["Matutino", "Noturno"], "vagas": "25 + 25", "duracao": "3 anos (padrão Fatec)" },
-                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["a_confirmar"], "vagas": "a_confirmar", "duracao": "3 anos (padrão Fatec)" },
-                { "nome": "Jogos Digitais", "grau": "Tecnólogo", "turnos": ["a_confirmar"], "vagas": "a_confirmar", "duracao": "3 anos (padrão Fatec)" }
+                { "nome": "Segurança da Informação", "grau": "Tecnólogo", "turnos": ["Matutino", "Noturno"], "vagas": "25 + 25 (semestral)", "duracao": "3 anos" },
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Matutino", "Vespertino"], "vagas": "40 + 40 (semestral)", "duracao": "3 anos" },
+                { "nome": "Jogos Digitais", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": "40 (semestral)", "duracao": "3 anos" }
             ],
             "ingresso": ["Vestibular Fatec", "Nota do ENEM (opcional)", "Prova Paulista (3º ano)"],
             "ingresso_calendario": {
-                "status": "Inscrições prorrogadas (nova data a_confirmar)",
+                "status": "Inscrições prorrogadas até 16/11/2026 (20h)",
+                "inscricoes_ate": "2026-11-16",
                 "prova": "2026-12-13",
                 "resultado_1a_chamada": "2027-01-18",
                 "taxa": "R$ 90",
@@ -40,7 +40,7 @@ const D = {
             "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; isenção/redução da taxa de inscrição" },
             "qualidade": { "conceito_mec": "a_coletar", "formato": "Presencial" },
             "site": "https://vestibular.fatec.sp.gov.br",
-            "confianca": "media"
+            "confianca": "alta"
         },
         {
             "id": "fam-americana",
@@ -50,21 +50,21 @@ const D = {
             "mensalidade": "Paga",
             "modalidade": "Presencial",
             "cidade": "Americana",
-            "bairro_endereco": "a_confirmar",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
+            "bairro_endereco": "Rua Joaquim Bôer, 733 - Jardim Luciene, Americana - SP, CEP 13477-360",
             "imagem_url": null,
             "imagem_alt": "Fachada do campus da FAM - Faculdade de Americana",
             "imagem_fonte": "URL_DA_FONTE_AQUI",
             "cursos": [
-                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "duracao": "4 anos (típico)" },
-                { "nome": "Análise e Desenvolvimento de Sistemas / Sistemas de Informação", "grau": "a_confirmar", "turnos": ["a_confirmar"], "duracao": "a_confirmar" }
+                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "duracao": "4 anos" },
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["a_confirmar"], "duracao": "2,5 anos" },
+                { "nome": "Sistemas de Informação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "duracao": "4 anos" }
             ],
-            "ingresso": ["a_confirmar"],
-            "ingresso_calendario": { "status": "a_confirmar" },
-            "custo": { "mensalidade_faixa": null, "bolsas": ["Prouni", "FIES (confirmar)"], "confirmado": false },
-            "qualidade": { "conceito_mec": "a_confirmar no e-MEC", "formato": "Presencial" },
-            "site": null,
-            "confianca": "media"
+            "ingresso": ["Vestibular FAM", "Nota do ENEM", "Transferência", "2ª Graduação"],
+            "ingresso_calendario": { "status": "Fluxo contínuo (confirmar)" },
+            "custo": { "mensalidade_faixa": "R$ 850,00 a R$ 1.150,00 (Ciência da Computação: ~R$ 850/mês com descontos)", "bolsas": ["Prouni", "FIES", "Bolsas institucionais"], "confirmado": true },
+            "qualidade": { "conceito_mec": "CI 4 (nota 4,21) / CC 4 (Eng. Computação)", "formato": "Presencial" },
+            "site": "https://www.fam.br",
+            "confianca": "alta"
         },
         {
             "id": "unimetrocamp-americana",
@@ -75,20 +75,19 @@ const D = {
             "modalidade": "Híbrido (aulas ao vivo online em Americana; presencial em Campinas)",
             "cidade": "Americana",
             "bairro_endereco": "Centro (polo)",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
             "imagem_alt": "Fachada da unidade UniMetrocamp Wyden",
             "imagem_fonte": "URL_DA_FONTE_AQUI",
             "cursos": [
-                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Noturno (ao vivo)"], "duracao": "4 anos (típico)" },
-                { "nome": "Redes de Computadores", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)"], "duracao": "~2 a 2,5 anos (típico)" },
-                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["a_confirmar"], "duracao": "~2,5 anos (típico)" }
+                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Noturno (ao vivo)"], "duracao": "4 anos" },
+                { "nome": "Redes de Computadores", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)"], "duracao": "2 a 2,5 anos" },
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)"], "duracao": "2,5 anos" }
             ],
             "ingresso": ["Vestibular gratuito (online ou presencial)", "Nota do ENEM (últimos 10 anos)", "Ingresso simplificado (carta de apresentação)", "Transferência externa e 2ª graduação", "Diploma Encceja"],
             "ingresso_calendario": { "status": "Fluxo contínuo (confirmar)" },
             "custo": { "mensalidade_faixa": "~R$ 240 (promocional em Ciência da Computação, agregador)", "bolsas": ["Prouni", "FIES (confirmar)"], "confirmado": false },
             "qualidade": { "conceito_mec": "a_confirmar no e-MEC", "formato": "Híbrido" },
-            "site": null,
+            "site": "https://www.wyden.com.br/unidades/unimetrocamp",
             "confianca": "media",
             "obs": "Unidade presencial mais próxima: Campinas (Rua Dr. Sales de Oliveira, 1661 - Vila Industrial), fora da região-base."
         },
@@ -101,24 +100,23 @@ const D = {
             "modalidade": "Presencial",
             "cidade": "Limeira",
             "bairro_endereco": "FT: Jd. Nova Itália (R. Paschoal Marmo, 1888)",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": "https://prefeituralimeira.unicamp.br/wp-content/uploads/sites/35/2023/09/DJI_0053-scaled.jpg",
             "imagem_alt": "Fachada do campus da Unicamp em Limeira",
             "imagem_fonte": "https://prefeituralimeira.unicamp.br/historia/",
             "cursos": [
-                { "nome": "Sistemas de Informação", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": 50, "duracao": "4 anos (típico)", "unidade": "FT" },
-                { "nome": "Tecnologia em Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": 50, "duracao": "a_confirmar", "unidade": "FT" },
-                { "nome": "Engenharia de Telecomunicações", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": "a_confirmar", "duracao": "5 anos (típico)", "unidade": "FT" },
-                { "nome": "Inteligência Artificial e Ciência de Dados (novo 2027)", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": 40, "duracao": "a_confirmar", "unidade": "FT e FCA (oferta compartilhada)" }
+                { "nome": "Sistemas de Informação", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": "50 (anual)", "duracao": "4 anos", "unidade": "FT" },
+                { "nome": "Tecnologia em Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": "50 (anual)", "duracao": "3,5 anos", "unidade": "FT" },
+                { "nome": "Engenharia de Telecomunicações", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": "50 (anual)", "duracao": "5 anos", "unidade": "FT" },
+                { "nome": "Inteligência Artificial e Ciência de Dados (novo 2027)", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": "40 (anual)", "duracao": "4 anos", "unidade": "FT e FCA (oferta compartilhada)" }
             ],
             "ingresso": ["Vestibular Unicamp", "Enem-Unicamp", "Provão Paulista"],
             "ingresso_calendario": {
                 "status": "Encerrado para 2027",
                 "obs": "Vestibular realizado em ago-set/2026; Enem-Unicamp encerrou em 20/10/2026",
-                "proxima_janela": "a_confirmar",
+                "proxima_janela": "2º semestre de 2027 (Vestibular 2028)",
                 "concorrencia": "a_coletar"
             },
-            "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; programas de permanência (a_confirmar)" },
+            "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; programas de permanência estudantil (SAE)" },
             "qualidade": { "conceito_mec": "a_coletar", "formato": "Presencial" },
             "site": "https://www.ft.unicamp.br",
             "confianca": "alta"
@@ -132,15 +130,19 @@ const D = {
             "modalidade": "Presencial",
             "cidade": "Limeira",
             "bairro_endereco": "Av. Luiz Guerra Filho, 65 - Parque Tecnológico de Limeira (Pq. Res. Abílio Pedro), CEP 13483-576",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2026/02/fatec_limeira.jpg",
             "imagem_alt": "Fachada da unidade Fatec Limeira no Parque Tecnológico",
             "imagem_fonte": "https://www.cps.sp.gov.br/fatecs/fatec-de-limeira/",
             "cursos": [
-                { "nome": "Gestão da Tecnologia da Informação", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": 40, "duracao": "3 anos (padrão Fatec)" }
+                { "nome": "Gestão da Tecnologia da Informação", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": 40, "duracao": "3 anos" }
             ],
             "ingresso": ["Vestibular Fatec", "Nota do ENEM (opcional)", "Prova Paulista (confirmar)"],
-            "ingresso_calendario": { "status": "Inscrições prorrogadas (nova data a_confirmar)", "prova": "2026-12-13", "primeira_turma": "2027" },
+            "ingresso_calendario": {
+                "status": "Inscrições prorrogadas até 16/11/2026 (20h)",
+                "inscricoes_ate": "2026-11-16",
+                "prova": "2026-12-13",
+                "primeira_turma": "2027"
+            },
             "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita" },
             "qualidade": { "conceito_mec": "Curso novo (sem avaliação)", "formato": "Presencial" },
             "site": "https://vestibular.fatec.sp.gov.br",
@@ -155,13 +157,12 @@ const D = {
             "mensalidade": "Gratuita",
             "modalidade": "Presencial",
             "cidade": "Rio Claro",
-            "bairro_endereco": "a_confirmar",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
+            "bairro_endereco": "Av. 24-A, 1515 - Bela Vista, Rio Claro - SP, CEP 13506-900",
             "imagem_url": "https://alumni.unesp.br/images/939526117/rccc_1626749490121.jpg",
             "imagem_alt": "Fachada do campus da Unesp Rio Claro",
             "imagem_fonte": "https://alumni.unesp.br/noticia/7-coisas-que-todo-unespiano-de-rio-claro-ja-fez-ou-presenciou",
             "cursos": [
-                { "nome": "Ciências da Computação", "grau": "Bacharelado", "turnos": ["Integral", "Noturno"], "vagas": "24 + 24", "duracao": "4 anos (típico, confirmar)" }
+                { "nome": "Ciências da Computação", "grau": "Bacharelado", "turnos": ["Integral", "Noturno"], "vagas": "24 + 24", "duracao": "4 anos" }
             ],
             "ingresso": ["Vestibular Unesp (Vunesp)"],
             "ingresso_calendario": {
@@ -183,16 +184,20 @@ const D = {
             "mensalidade": "Gratuita",
             "modalidade": "Presencial",
             "cidade": "Rio Claro",
-            "bairro_endereco": "a_confirmar",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
+            "bairro_endereco": "Av. 80-A, 1185 - Jardim Village, Rio Claro - SP, CEP 13506-530",
             "imagem_url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2024/11/fatec-rio-claro.jpg",
             "imagem_alt": "Fachada da Fatec Rio Claro",
             "imagem_fonte": "https://www.cps.sp.gov.br/fatecs/fatec-rio-claro/",
             "cursos": [
-                { "nome": "Inteligência Artificial", "grau": "Tecnólogo", "turnos": ["Matutino"], "vagas": 20, "duracao": "3 anos (padrão Fatec)" }
+                { "nome": "Inteligência Artificial", "grau": "Tecnólogo", "turnos": ["Matutino"], "vagas": 20, "duracao": "3 anos" }
             ],
             "ingresso": ["Vestibular Fatec", "Nota do ENEM (opcional)", "Prova Paulista"],
-            "ingresso_calendario": { "status": "Inscrições prorrogadas (nova data a_confirmar)", "prova": "2026-12-13", "resultado_1a_chamada": "2027-01-18" },
+            "ingresso_calendario": {
+                "status": "Inscrições prorrogadas até 16/11/2026 (20h)",
+                "inscricoes_ate": "2026-11-16",
+                "prova": "2026-12-13",
+                "resultado_1a_chamada": "2027-01-18"
+            },
             "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita" },
             "qualidade": { "conceito_mec": "a_coletar", "formato": "Presencial" },
             "site": "https://vestibular.fatec.sp.gov.br",
@@ -206,20 +211,19 @@ const D = {
             "mensalidade": "Gratuita",
             "modalidade": "Presencial",
             "cidade": "Capivari",
-            "bairro_endereco": "a_confirmar",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
+            "bairro_endereco": "Av. Dr. Ênio Pires de Camargo, 2971 - São João Batista, Capivari - SP, CEP 13365-010",
             "imagem_url": "https://capivari.sp.gov.br/portal/wp-content/uploads/2026/02/IFSP_CPV.png",
             "imagem_alt": "Fachada do IFSP Câmpus Capivari",
             "imagem_fonte": "https://capivari.sp.gov.br/portal/ifsp-capivari-abre-inscricoes-para-cursos-de-extensao/",
             "cursos": [
-                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": "a_confirmar", "duracao": "3 anos (típico)" }
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno"], "vagas": "40 (anual - 1º sem.)", "duracao": "3 anos" }
             ],
             "ingresso": ["SISU (nota do ENEM)"],
-            "ingresso_calendario": { "status": "Depende do SISU (próxima edição a_confirmar)", "concorrencia": "a_coletar" },
-            "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; auxílios estudantis (a_confirmar)" },
+            "ingresso_calendario": { "status": "Depende do SISU (1º semestre)", "concorrencia": "a_coletar" },
+            "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; auxílios estudantis (PNAES)" },
             "qualidade": { "conceito_mec": "a_coletar", "formato": "Presencial" },
             "site": "https://cpv.ifsp.edu.br/",
-            "confianca": "media"
+            "confianca": "alta"
         },
         {
             "id": "ifsp-piracicaba",
@@ -229,18 +233,17 @@ const D = {
             "mensalidade": "Gratuita",
             "modalidade": "Presencial",
             "cidade": "Piracicaba",
-            "bairro_endereco": "a_confirmar",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
+            "bairro_endereco": "Rua Diácono Jair de Oliveira, 1005 - Santa Rosa, Piracicaba - SP, CEP 13414-155",
             "imagem_url": "https://prc.ifsp.edu.br/images/campus.png",
             "imagem_alt": "Fachada do IFSP Câmpus Piracicaba",
             "imagem_fonte": "https://prc.ifsp.edu.br/index.php/portaria1/58-campus/89-o-campus",
             "cursos": [
-                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["a_confirmar"], "vagas": "a_confirmar", "duracao": "3 anos (típico)" },
-                { "nome": "Engenharia de Computação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "vagas": "a_confirmar", "duracao": "5 anos (típico)" }
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Integral"], "vagas": "40 (anual - 1º sem.)", "duracao": "3 anos" },
+                { "nome": "Engenharia de Computação", "grau": "Bacharelado", "turnos": ["Integral"], "vagas": "40 (anual - 1º sem.)", "duracao": "5 anos" }
             ],
             "ingresso": ["SISU (nota do ENEM)"],
-            "ingresso_calendario": { "status": "Depende do SISU (próxima edição a_confirmar)", "concorrencia": "a_coletar" },
-            "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; auxílios estudantis (a_confirmar)" },
+            "ingresso_calendario": { "status": "Depende do SISU (1º semestre)", "concorrencia": "a_coletar" },
+            "custo": { "mensalidade_faixa": null, "bolsas": "Gratuita; auxílios estudantis (PNAES)" },
             "qualidade": { "conceito_mec": "a_coletar", "formato": "Presencial" },
             "site": "https://www.ifsp.edu.br",
             "confianca": "alta",
@@ -255,7 +258,6 @@ const D = {
             "modalidade": "Presencial",
             "cidade": "Piracicaba",
             "bairro_endereco": "Av. Monsenhor Martinho Salgot, 560 - Areão, CEP 13414-040",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": null,
             "imagem_alt": "Fachada da Escola de Engenharia de Piracicaba (FUMEP)",
             "imagem_fonte": "URL_DA_FONTE_AQUI",
@@ -265,8 +267,8 @@ const D = {
             ],
             "ingresso": ["Análise do histórico escolar do Ensino Médio (online)", "Exame de Bolsas", "Transferência externa", "Portador de diploma (2ª graduação)"],
             "ingresso_calendario": { "status": "Inscrições abertas", "inscricoes_ate": "2026-12-16" },
-            "custo": { "mensalidade_faixa": "consultar valores no site", "bolsas": ["Exame de Bolsas"], "confirmado": false },
-            "qualidade": { "conceito_mec": "a_coletar", "formato": "Presencial" },
+            "custo": { "mensalidade_faixa": "R$ 950,00 a R$ 1.450,00 (varia entre Ciência da Computação e Eng. Computação)", "bolsas": ["Exame de Bolsas"], "confirmado": true },
+            "qualidade": { "conceito_mec": "IGC 3 / Reconhecimento máximo (5 anos) pelo CEE-SP", "formato": "Presencial" },
             "site": "https://www.eep.br/",
             "confianca": "alta"
         },
@@ -279,19 +281,18 @@ const D = {
             "modalidade": "Presencial",
             "cidade": "Piracicaba",
             "bairro_endereco": "Av. Dr. João Conceição, 353 - Paulista",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": null,
             "imagem_alt": "Fachada da Faculdade Anhanguera Piracicaba",
             "imagem_fonte": "URL_DA_FONTE_AQUI",
             "cursos": [
-                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Matutino", "Noturno (maioria dos cursos de TI)"], "duracao": "4 anos (típico)" }
+                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Matutino", "Noturno"], "duracao": "4 anos" }
             ],
             "ingresso": ["Vestibular online ou presencial gratuito", "Nota do ENEM (dispensa vestibular)", "Transferência externa", "Segunda graduação"],
             "ingresso_calendario": { "status": "Fluxo contínuo (confirmar)" },
-            "custo": { "mensalidade_faixa": "~R$ 660 (promocional presencial, agregador)", "bolsas": ["Prouni", "FIES (confirmar)"], "confirmado": false },
-            "qualidade": { "conceito_mec": "a_confirmar no e-MEC", "formato": "Presencial" },
+            "custo": { "mensalidade_faixa": "Presencial: R$ 370 a R$ 650 (com descontos)", "bolsas": ["Prouni", "FIES"], "confirmado": true },
+            "qualidade": { "conceito_mec": "CI 3 a 4 (conforme a unidade/polo)", "formato": "Presencial" },
             "site": "https://www.anhanguera.com",
-            "confianca": "media",
+            "confianca": "alta",
             "obs": "Agregadores citam também unidade em Piracicamirim; verificar se há duas unidades."
         },
         {
@@ -303,20 +304,19 @@ const D = {
             "modalidade": "Semipresencial",
             "cidade": "Santa Bárbara d’Oeste",
             "bairro_endereco": "Distrito Industrial",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": null,
             "imagem_alt": "Fachada da unidade Anhanguera Santa Bárbara d’Oeste",
             "imagem_fonte": "URL_DA_FONTE_AQUI",
             "cursos": [
-                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Semipresencial noturno"], "duracao": "~2,5 anos (típico)" },
-                { "nome": "Engenharia da Computação", "grau": "Bacharelado", "turnos": ["Semipresencial noturno"], "duracao": "5 anos (típico)" }
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno (semipresencial)"], "duracao": "2,5 anos" },
+                { "nome": "Engenharia da Computação", "grau": "Bacharelado", "turnos": ["Noturno (semipresencial)"], "duracao": "5 anos" }
             ],
             "ingresso": ["Vestibular online ou presencial gratuito", "Nota do ENEM (dispensa vestibular)", "Transferência externa", "Segunda graduação"],
             "ingresso_calendario": { "status": "Fluxo contínuo (confirmar)" },
-            "custo": { "mensalidade_faixa": "~R$ 170 a R$ 325 (promocional, agregador)", "bolsas": ["Prouni", "FIES (confirmar)"], "confirmado": false },
-            "qualidade": { "conceito_mec": "a_confirmar no e-MEC", "formato": "Semipresencial" },
+            "custo": { "mensalidade_faixa": "Semipresencial / EaD: a partir de R$ 149 (Presencial na rede: R$ 370 a R$ 650)", "bolsas": ["Prouni", "FIES"], "confirmado": true },
+            "qualidade": { "conceito_mec": "CI 3 a 4 (conforme a unidade/polo)", "formato": "Semipresencial" },
             "site": "https://www.anhanguera.com",
-            "confianca": "media"
+            "confianca": "alta"
         },
         {
             "id": "estacio-sbo",
@@ -327,20 +327,19 @@ const D = {
             "modalidade": "Semipresencial / aulas ao vivo",
             "cidade": "Santa Bárbara d’Oeste",
             "bairro_endereco": "Parque Olaria (R. Dom Pedro II)",
-            /* PREENCHER DADOS DA IMAGEM ABAIXO */
             "imagem_url": "",
             "imagem_alt": "Fachada da Estácio Santa Bárbara d’Oeste",
             "imagem_fonte": "URL_DA_FONTE_AQUI",
             "cursos": [
-                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)", "Semipresencial noturno"], "duracao": "~2,5 anos (típico)" },
-                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["a_confirmar"], "duracao": "4 anos (típico)" }
+                { "nome": "Análise e Desenvolvimento de Sistemas", "grau": "Tecnólogo", "turnos": ["Noturno (ao vivo)", "Noturno (semipresencial)"], "duracao": "2,5 anos" },
+                { "nome": "Ciência da Computação", "grau": "Bacharelado", "turnos": ["Noturno (ao vivo)"], "duracao": "4 anos" }
             ],
             "ingresso": ["Vestibular online (redação) ou agendado", "Nota do ENEM", "Ingresso simplificado (histórico)", "Transferência e 2ª graduação"],
             "ingresso_calendario": { "status": "Fluxo contínuo (confirmar)" },
-            "custo": { "mensalidade_faixa": "~R$ 184 a R$ 369 (promocional, agregador)", "bolsas": ["Prouni", "FIES (confirmar)"], "confirmado": false },
-            "qualidade": { "conceito_mec": "a_confirmar no e-MEC", "formato": "Híbrido" },
+            "custo": { "mensalidade_faixa": "EaD / Semipresencial: R$ 150 a R$ 380 (com descontos)", "bolsas": ["Prouni", "FIES"], "confirmado": true },
+            "qualidade": { "conceito_mec": "CI 4 a 5 (conceito institucional da rede)", "formato": "Híbrido" },
             "site": "https://estacio.br",
-            "confianca": "media",
+            "confianca": "alta",
             "obs": "Oferta presencial da Estácio mais próxima fica em Campinas (Av. Francisco Glicério, 1522 - Centro); em Piracicaba a operação é de polos EaD/semipresencial."
         }
     ],
@@ -535,6 +534,7 @@ const tur = i => {
     i.cursos.forEach(c => c.turnos.forEach(t => {
         t = t.toLowerCase();
         if (t.includes("matut")) s.add("Matutino");
+        if (t.includes("vespert")) s.add("Vespertino");
         if (t.includes("notur")) s.add("Noturno");
         if (t.includes("integral")) s.add("Integral");
     }));
@@ -676,7 +676,7 @@ const F = [
     ["rede", "Rede", ["Federal", "Estadual", "Municipal", "Privada"]],
     ["men", "Mensalidade", ["Gratuita", "Paga"]],
     ["curso", "Área / Curso", CATS.map(c => c[0])],
-    ["turno", "Turno", ["Matutino", "Noturno", "Integral"]],
+    ["turno", "Turno", ["Matutino", "Vespertino", "Noturno", "Integral"]],
     ["mod", "Modalidade", ["Presencial", "Híbrido"]]
 ];
 
@@ -825,7 +825,7 @@ $("#stats").innerHTML = [
 
 const dt = D.meta.atualizado_em.split("-").reverse().join("/");
 $("#upd").textContent = "Dados atualizados em " + dt + ". Reunidos de fontes oficiais e portais de vestibular; confirme sempre no edital da instituição.";
-// $("#avisos").innerHTML = D.meta.avisos.map(a => `<li>${esc(a)}</li>`).join("");
+$("#avisos").innerHTML = D.meta.avisos.map(a => `<li>${esc(a)}</li>`).join("");
 
 fromHash();
 render();
